@@ -26,7 +26,6 @@ mongoose
   })
   .catch(error => console.error('MongoDB connection error:', error));
 
-// הגדרת ראוטים
 app.use('/api/auth', authRoutes);
 app.use('/api/missiles', missileRoutes); 
 
