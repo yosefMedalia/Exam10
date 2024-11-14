@@ -23,3 +23,16 @@ export const loadInitialData = async () => {
     console.error('Error loading initial data:', error);
   }
 };
+
+
+import fs from 'fs';
+import path from 'path';
+
+//טעינה של נתוני הטילים
+
+export const loadMissilesData = () => {
+  const filePath = path.join(__dirname, '../../data/missiles.json');
+  const fileData = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileData);
+};
+
