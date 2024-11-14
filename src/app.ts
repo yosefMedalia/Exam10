@@ -32,7 +32,7 @@ app.use('/api/missiles', missileRoutes);
 io.on('connection', async (socket) => {
   console.log('New client connected');
 
-  // שליחת רשימת טילים לכל לקוח שמתחבר
+  // שליחת רשימת טילים לכל מי שמתחבר
   try {
     const missiles = await Missile.find(); 
     socket.emit('missilesData', missiles); 
